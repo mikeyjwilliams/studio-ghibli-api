@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export function Foobar(setter) {
+export function GhibliFilmsApi(setter) {
     axios
         .get('https://ghibliapi.herokuapp.com/films')
         .then(res => setter(res.data))
