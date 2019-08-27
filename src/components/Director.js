@@ -7,7 +7,7 @@ export function Director(props) {
     const { director } = props;
     return (
         <>
-        <h3>{director}</h3>
+        <p>Directed By: {director}</p>
         </>
     )
 }
