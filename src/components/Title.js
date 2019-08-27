@@ -4,7 +4,7 @@ export function Title(props) {
     if(!props.films) return (
         <h1>Loading Film Title...</h1>
     );
-        const { title } = props;
+        const { title } = props.title;
     return (
         <>
             <h2>{title}</h2>
