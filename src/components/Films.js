@@ -23,9 +23,9 @@ export function Films(props) {
                 return (
                 
                 <Card key={film.id}
-                header= 'Studio Ghibli'
+                    header= <Title film={film} key={film.id + 't'} />
                     meta= <ReleaseDate film={film} key={film.id + 'r'} />  
-                description =<Description film={film} key={film.id + 'd'} />
+                    description =<Description film={film} key={film.id + 'd'} />
                 />
             )})
             }
