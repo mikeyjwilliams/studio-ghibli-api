@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { GhibliFilmsApi } from './components/GhibliApis';
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
+import { Films } from './components/Films';
+
+// objects -> must map the set
+// card component holding.
+  // title
+  // director
+  // release_date
+  // rt_score
+  // description
+
 
 function App() {
+  const [films, setFilms] = useState();
+  useEffect(() => {
+    GhibliFilmsApi(setFilms);
+  }, []); 
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Ghibli Films!</h1>
+      <Films films={films} />
     </div>
   );
 }
