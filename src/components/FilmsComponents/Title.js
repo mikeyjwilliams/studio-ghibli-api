@@ -9,7 +9,8 @@ export function Title(props) {
             </Dimmer>
         </Segment>
     );
-        const { title } = props.title;
+        const { films } = props;
+        const  title  = films.title;
     return (
         <>
             <h2>{title}</h2>
