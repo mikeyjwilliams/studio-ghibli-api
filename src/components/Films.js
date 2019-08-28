@@ -18,9 +18,10 @@ export function Films(props) {
    
     return (
         <div>
+            <Card.Group>
             {films.map((film) => {
                 return (
-
+                
                 <Card key={film.id}
                 header= 'Studio Ghibli'
                     meta= <ReleaseDate film={film} key={film.id + 'r'} />  
@@ -28,6 +29,7 @@ export function Films(props) {
                 />
             )})
             }
+            </Card.Group>
                 
                 
         </div>
