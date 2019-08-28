@@ -1,18 +1,20 @@
 import React from 'react';
 import { Dimmer, Loader, Segment } from 'semantic-ui-react';
 
+
 export function ReleaseDate(props) {
-    if(!props.release_date) return (
+    if(!props.film) return (
         <Segment>
-            <Dimmer active>
-                <Loader inverted>Loading...</Loader>
+            <Dimmer active inverted>
+                <Loader>Loading...</Loader>
             </Dimmer>
         </Segment>
     );
-    const { releaseDate } = props.release_date;
+    const { film } = props;
+    const releaseDate  = film.release_date;
     return (
         <>
-            <p>{releaseDate}</p>
+            <p>Released: {releaseDate}</p>
         </>
     )
 }

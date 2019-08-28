@@ -2,14 +2,16 @@ import React from 'react';
 import { Dimmer, Loader, Segment } from 'semantic-ui-react';
 
 export function Description(props) {
-    if(!props.films.description) return (
+    if(!props.film) return (
         <Segment>
-            <Dimmer active>
-                <Loader inverted>Loading...</Loader>
+            <Dimmer active inverted>
+                <Loader>Loading...</Loader>
             </Dimmer>
         </Segment>
     )
-    const { description } = props.films.description;
+    const { film } = props;
+    const  description  = film.description;
+   
     return (
        <>
         <p>{description}</p>
