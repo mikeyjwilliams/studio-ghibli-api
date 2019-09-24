@@ -1,11 +1,5 @@
 import React from 'react';
 
-import { Title } from './FilmsComponents/Title';
-import { Director } from './FilmsComponents/Director';
-import { ReleaseDate } from './FilmsComponents/ReleaseDate';
-import { RateScore } from './FilmsComponents/RateScore';
-import { Description } from './FilmsComponents/Description';
-
 export function Films(props) {
   if (!props.films) return <h2>Loading....</h2>;
   const { films } = props;
