@@ -1,44 +1,30 @@
 import React from 'react';
-import { Dimmer, Loader, Segment, Card } from 'semantic-ui-react';
-import { Title } from './FilmsComponents/Title';
-import { Director } from './FilmsComponents/Director';
-import { ReleaseDate } from './FilmsComponents/ReleaseDate';
-import { RateScore } from './FilmsComponents/RateScore';
-import { Description } from './FilmsComponents/Description';
 
 export function Films(props) {
-    if (!props.films) return (
-        <Segment>
-            <Dimmer active>
-                <Loader inverted>Loading...</Loader>
-            </Dimmer>
-        </Segment>
-    )
-    const { films } = props;
-   
-    return (
-        <div>
-            <Card.Group>
-            {films.map((film) => {
-                return (
-                
-                <Card key={film.id}
-                    header= <Title film={film} key={film.id + 't'} />
-                    meta= <ReleaseDate film={film} key={film.id + 'r'} />  
-                    description =<Description film={film} key={film.id + 'd'} />
-                />
-            )})
-            }
-            </Card.Group>
-                
-                
-        </div>
-    )
+  if (!props.films) return <h2>Loading....</h2>;
+  const { films } = props;
+
+  return (
+    <div>
+      <div>
+        {films.map(film => {
+          return (
+            <div key={film.id}>
+              {/* <Title film={film} key={film.id + 't'} /> */}
+              <h2>{film.title}</h2>
+              {/* <ReleaseDate film={film} key={film.id + 'r'} />   */}
+              {/* <Description film={film} key={film.id + 'd'} /> */}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 // card component holding.
-  // title
-  // director
-  // release_date
-  // rt_score
-  // description
+// title
+// director
+// release_date
+// rt_score
+// description

@@ -1,28 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { GhibliFilmsApi } from './components/GhibliApis';
-import 'semantic-ui-css/semantic.min.css';
+//import { GhibliFilmsApi } from './components/GhibliApis';
+
 import './App.css';
-import { Films } from './components/Films';
+
+import FilmData from './components/FilmsComponents/FilmData';
 
 // objects -> must map the set
 // card component holding.
-  // title
-  // director
-  // release_date
-  // rt_score
-  // description
-
+// title
+// director
+// release_date
+// rt_score
+// description
 
 function App() {
   const [films, setFilms] = useState();
-  useEffect(() => {
-    GhibliFilmsApi(setFilms);
-  }, []); 
-  
+
+  // useEffect(() => {
+  //   GhibliFilmsApi(setFilms);
+  // }, []);
+
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Ghibli Films!</h1>
-      <Films films={films} />
+      <FilmData />
     </div>
   );
 }
