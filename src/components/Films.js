@@ -10,7 +10,6 @@ export function Films(props) {
 				{films.map((film) => {
 					return (
 						<div key={film.id}>
-							{/* <Title film={film} key={film.id + 't'} /> */}
 							<h2>{film.title}</h2>
 							<div>
 								<p>Release date: {film.release_date}</p>
@@ -18,8 +17,6 @@ export function Films(props) {
 							</div>
 							<p>{film.description}</p>
 							<p>Film score: {film.rt_score}</p>
-
-							{/* <Description film={film} key={film.id + 'd'} /> */}
 						</div>
 					);
 				})}
