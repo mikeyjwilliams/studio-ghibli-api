@@ -25,7 +25,7 @@ function App() {
 		<div className="App">
 			<CssBaseline />
 			<h1>Ghibli Films!</h1>
-			<FilmData />
+			{/* <FilmData /> */}
 			<Films films={films} />
 		</div>
 	);
